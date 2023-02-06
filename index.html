@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
+    <title>Not so Magic Eight Ball</title>
+    </head>
+  <body>
+    <h1>Not so Magic Eight Ball</h1>
+    <div class="container">
+
+      <form name="userNameForm" id="userNameForm" action="">
+        <p>What is your name?</p>
+        <label for="name">Name:</label>
+        <input type="text" id="userName" name="userName" value=""/>
+        <input type="button" onclick="submitUserName()" value="Submit your name to the oracle">
+      </form>
+      <p id="greetUser"></p>
+
+      <form name="questionForm" id="questionForm" action="">
+        <p>What question do you want to ask me?</p>
+        <label for="name">Question:</label>
+        <input type="text" id="question" name="question" value=""/>
+        <input type="button" onclick="askQuestion()" value="Submit your question to the oracle">
+      </form>
+      <p id="askQuestion"></p>
+      <img src="./assets/8-ball.png" alt="Magic Eight Ball"/>
+      <p id="oracles-answer"></p>
+    </div>
+    <script src="./JS/magic-eight.js"></script>
+  </body>
+</html>
