@@ -69,10 +69,9 @@ const doMagic = () => {
   }
   document.getElementById('oracles-answer').innerHTML = answer
 }
-// const askAgain = () => {
-//   window.location.reload()
-// }
+const askAgain = () => {
+  window.location.reload()
+}
 
 // to do:
-// ask again buggy
 // format answer into triangle
