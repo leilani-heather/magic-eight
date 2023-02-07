@@ -4,7 +4,7 @@
 ![Screenshot of App v.0](./assets/browserScreenshot.png)
 
 
-### Feel free to clone it down, make it your own, fix bugs, write some tests, update the styling - whatever you'd like. It's all yours.
+### Feel free to fork & clone it down, make it your own, fix bugs, write some tests, update the styling - whatever you'd like. It's all yours.
 
 ### Bug Report 🐞
 - Buttons currently push a query string into the URL on key press / `enter` or `return`.
