@@ -1,0 +1,41 @@
+body {
+	background: black;
+	font-family: 'Unbounded', cursive;
+	text-align: center;
+  color: white;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: small;
+  width: 400px;
+  height: auto;
+}
+
+.heading {
+  margin-bottom: 50px;
+}
+
+img {
+  width: 400px;
+  height: auto;
+}
+
+.button {
+  background:none;
+  color: white;
+  border:none;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+  text-align: left;
+}
