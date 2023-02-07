@@ -1,17 +1,23 @@
 let userName = ''
 let userQuestion = ''
-let randomNumber = Math.floor(Math.random() * 8)
+let test = 0
+// let randomNumber = Math.floor(Math.random() * 8) ** Added into doMagic
 
 const submitUserName = () => {
   let userName = document.querySelector("input[name='userName']").value
   greetUser(userName)
+  test = Number(userName)
   userName = ''
-  hideUserName()
+  hide('userNameForm')
 }
 
-const hideUserName = () => {
-  document.getElementById('userNameForm').style.display = 'none'
+function hide (element) {
+  document.getElementById(element).style.display = 'none'
 }
+
+// const hideUserName = () => {
+//   document.getElementById('userNameForm').style.display = 'none'
+// }
 
 const greetUser = (userName) => {
   userName
@@ -27,45 +33,46 @@ const askQuestion = () => {
     'askQuestion'
   ).innerHTML = `So you want to know '${userQuestion.toLowerCase()}' <br>Hmm, let me see...`
   userQuestion = ''
-  hideQuestion()
+  hide('questionForm')
   doMagic()
 }
 
-const hideQuestion = () => {
-  document.getElementById('questionForm').style.display = 'none'
-}
+// const hideQuestion = () => {
+//   document.getElementById('questionForm').style.display = 'none'
+// }
 
 const doMagic = () => {
-  // let eightBall = document.getElementById('oracles-answer').innerHTML // why cant I use this?
-  switch (randomNumber) {
+  const random = Math.floor(Math.random() * 8)
+  let answer = ''
+  switch (test) {
     case 0:
-      return (eightball = 'It is certain')
+      answer = 'It is certain'
+      break
     case 1:
-      return (document.getElementById('oracles-answer').innerHTML =
-        'It is decidedly so')
+      answer = 'It is decidedly so'
+        break
     case 2:
-      return (document.getElementById('oracles-answer').innerHTML =
-        'Reply hazy try again')
+      answer = 'Reply hazy try again'
+        break
     case 3:
-      return (document.getElementById('oracles-answer').innerHTML =
-        'Cannot predict now')
+      answer = 'Cannot predict now'
+        break
     case 4:
-      return (document.getElementById('oracles-answer').innerHTML =
-        'Do not count on it')
+      answer = 'Do not count on it'
+        break
     case 5:
-      return (document.getElementById('oracles-answer').innerHTML =
-        'My sources say no')
+      answer = 'My sources say no'
+        break
     case 6:
-      return (document.getElementById('oracles-answer').innerHTML =
-        'Outlook not so good')
+      answer = "OMG that's gross"
+        break
     case 7:
-      return (document.getElementById('oracles-answer').innerHTML =
-        'Signs point to yes')
+      answer = 'Signs point to yes'
+        break
     default:
-      return (document.getElementById(
-        'oracles-answer'
-      ).innerHTML = `Don't rely on me. I'm a switch statement tbh.`)
+      answer = `Don't rely on me. I'm a switch statement tbh.`
   }
+  document.getElementById('oracles-answer').innerHTML = answer
 }
 
 // To do:
