@@ -73,9 +73,9 @@ const doMagic = () => {
   }
 }
 
-const askAgain = () => {
-  window.location.reload()
-}
+// const askAgain = () => {
+//   window.location.reload()
+// }
 
 // To do:
 // Fix the form clearing bug
