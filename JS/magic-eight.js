@@ -7,10 +7,15 @@ const submitUserName = () => {
   greetUser(userName)
   userName = ''
   hideUserName()
+  showQuestion()
 }
 
 const hideUserName = () => {
   document.getElementById('userNameForm').style.display = 'none'
+}
+
+const showQuestion = () => {
+  document.getElementById('questionForm').style.display = 'block'
 }
 
 const greetUser = (userName) => {
@@ -68,9 +73,12 @@ const doMagic = () => {
   }
 }
 
+const askAgain = () => {
+  window.location.reload()
+}
+
 // To do:
-// Ask another question feature
-// CSS the answer over the ball
 // Fix the form clearing bug
 // Why cant i make a variable for the switch to use?
 // hiding should be able to use the same function, double up
+//Add Jareds responses
