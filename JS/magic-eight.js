@@ -38,9 +38,8 @@ const askQuestion = () => {
 }
 
 const doMagic = () => {
-  const random = Math.floor(Math.random() * 8)
   let answer = ''
-  switch (test) {
+  switch (Math.floor(Math.random() * 8)) {
     case 0:
       answer = 'It is certain'
       break
@@ -70,7 +69,6 @@ const doMagic = () => {
   }
   document.getElementById('oracles-answer').innerHTML = answer
 }
-
 // const askAgain = () => {
 //   window.location.reload()
 // }
