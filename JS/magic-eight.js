@@ -1,11 +1,9 @@
 let userName = ''
 let userQuestion = ''
-let test = 0
 
 const submitUserName = () => {
   let userName = document.querySelector("input[name='userName']").value
   greetUser(userName)
-  test = Number(userName)
   document.querySelector("input[name='userName']").value = ''
   hide('userNameForm')
   show('questionForm')
@@ -72,6 +70,3 @@ const doMagic = () => {
 const askAgain = () => {
   window.location.reload()
 }
-
-// to do:
-// format answer into triangle
