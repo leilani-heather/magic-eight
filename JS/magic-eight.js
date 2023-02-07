@@ -6,7 +6,7 @@ const submitUserName = () => {
   let userName = document.querySelector("input[name='userName']").value
   greetUser(userName)
   test = Number(userName)
-  userName = ''
+  document.querySelector("input[name='userName']").value = ''
   hide('userNameForm')
   show('questionForm')
 }
@@ -32,7 +32,7 @@ const askQuestion = () => {
   document.getElementById(
     'askQuestion'
   ).innerHTML = `So you want to know '${userQuestion.toLowerCase()}' <br>Hmm, let me see...`
-  userQuestion = ''
+  document.querySelector("input[name='question']").value = ''
   hide('questionForm')
   doMagic()
 }
