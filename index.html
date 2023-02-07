@@ -5,29 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
-    <title>Not so Magic Eight Ball</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
+    <link href="./styles/main.css" rel="stylesheet" type="text/css">
+    <title>Not-So-Magic Eight Ball</title>
     </head>
   <body>
-    <h1>Not so Magic Eight Ball</h1>
-    <div class="container">
-
+    <div class="heading">
+      <h1>Not-So-Magic Eight Ball</h1>
+    </div>
+    <div>
       <form name="userNameForm" id="userNameForm" action="">
         <p>What is your name?</p>
         <label for="name">Name:</label>
         <input type="text" id="userName" name="userName" value=""/>
-        <input type="button" onclick="submitUserName()" value="Submit your name to the oracle">
+        <input type="button" class="button" onclick="submitUserName()" value="Submit name">
       </form>
       <p id="greetUser"></p>
 
-      <form name="questionForm" id="questionForm" action="">
+      <form name="questionForm" id="questionForm" action="" style="display:none;">
         <p>What question do you want to ask me?</p>
         <label for="name">Question:</label>
-        <input type="text" id="question" name="question" value=""/>
-        <input type="button" onclick="askQuestion()" value="Submit your question to the oracle">
+        <input type="text" id="question" name="question" value="" required/>
+        <input type="button" class="button" onclick="askQuestion()" value="Submit question">
       </form>
       <p id="askQuestion"></p>
-      <img src="./assets/8-ball.png" alt="Magic Eight Ball"/>
-      <p id="oracles-answer"></p>
+
+      <div class="container">
+        <img src="./assets/8-ball.png" alt="Magic Eight Ball"/>
+        <p class="centered" id="oracles-answer"></p>
+      </div>
+      <!-- <input type="button" class="button" onclick="askAgain()" value="Ask again"> -->
     </div>
     <script src="./JS/magic-eight.js"></script>
   </body>

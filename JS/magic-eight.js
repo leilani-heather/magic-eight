@@ -1,23 +1,22 @@
 let userName = ''
 let userQuestion = ''
 let test = 0
-// let randomNumber = Math.floor(Math.random() * 8) ** Added into doMagic
 
 const submitUserName = () => {
   let userName = document.querySelector("input[name='userName']").value
   greetUser(userName)
-  test = Number(userName)
   userName = ''
   hide('userNameForm')
+  showQuestion()
 }
 
 function hide (element) {
   document.getElementById(element).style.display = 'none'
 }
 
-// const hideUserName = () => {
-//   document.getElementById('userNameForm').style.display = 'none'
-// }
+const showQuestion = () => {
+  document.getElementById('questionForm').style.display = 'block'
+}
 
 const greetUser = (userName) => {
   userName
@@ -42,9 +41,8 @@ const askQuestion = () => {
 // }
 
 const doMagic = () => {
-  const random = Math.floor(Math.random() * 8)
   let answer = ''
-  switch (test) {
+  switch (Math.floor(Math.random() * 8)) {
     case 0:
       answer = 'It is certain'
       break
@@ -75,9 +73,12 @@ const doMagic = () => {
   document.getElementById('oracles-answer').innerHTML = answer
 }
 
+// const askAgain = () => {
+//   window.location.reload()
+// }
+
 // To do:
-// Ask another question feature
-// CSS the answer over the ball
 // Fix the form clearing bug
 // Why cant i make a variable for the switch to use?
 // hiding should be able to use the same function, double up
+//Add Jareds responses
