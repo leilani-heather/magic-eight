@@ -1,5 +1,5 @@
 # Not So Magic Eight Ball 🎱
-## A simple JS, HTML and CSS project to muck around with.
+## A simple TS, JS, HTML and CSS project to muck around with.
 
 ![Screenshot of App v.0](./assets/browserScreenshot.png)
 

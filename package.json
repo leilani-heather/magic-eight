@@ -1,0 +1,24 @@
+{
+  "name": "magic-eight",
+  "version": "1.0.0",
+  "description": "![Screenshot of App v.0](./assets/browserScreenshot.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leilani-heather/magic-eight.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leilani-heather/magic-eight/issues"
+  },
+  "homepage": "https://github.com/leilani-heather/magic-eight#readme",
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "typescript": "^4.9.5"
+  }
+}
