@@ -19,7 +19,19 @@ There are probably heaps more, find them and make it your own!
 2. Clone it down
 3. Open `index.html` in a web browser or using the `Live Server` extension in VS Code if you have it
 
+### TypeScript Branch
+There is a wee `TS` branch with the same project converted.
+
+If you're interested in running it and having a snoop around, you may need to run the following in your console
+`npm i -D @types/node`
+
+To quote the legend Gerard Paapu...
+
+> This installs node and a package to help us out with types. Many JavaScript packages don't have their own type declarations, but there is a community project to provide 3rd party types 'Definitely Typed'. These 3rd party types aren't always perfect or up to date, but they can be really useful.This package provides types for node's builtin modules.
+
+All `TypeScript` code is written here in `./src/magic-eight.ts`. Don't make edits to the `JavaScript` code. Make edits to the `TS` file, then run `npx tsc` to compile the programme. You'll see your edits converted from `TS` to `JS` in the `./dist` file.
+
 ### Rules
-- `Main` on this repo is protected, you cannot push to it.
+- `Main` & `TS` in this repo are protected, you cannot push to them.
 - Please don't make `PR's` to this version. Make sure you fork and clone down your own version.
 - Have fun ㋡
