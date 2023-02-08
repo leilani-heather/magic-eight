@@ -16,7 +16,7 @@
       <h1>Not-So-Magic Eight Ball</h1>
     </div>
     <div>
-      <form  name="userNameForm" id="userNameForm" action="">
+      <form name="userNameForm" id="userNameForm" action="" onsubmit="submitUserName(); return false;">
         <p>What is your name?</p>
         <label for="name">Name:</label>
         <input type="text" id="userName" name="userName" value=""/>
@@ -24,7 +24,7 @@
       </form>
       <p id="greetUser"></p>
 
-      <form name="questionForm" id="questionForm" action="" style="display:none;">
+      <form name="questionForm" id="questionForm" action="" style="display:none;" onsubmit="askQuestion(); return false;">
         <p>What question do you want to ask me?</p>
         <label for="name">Question:</label>
         <input type="text" id="question" name="question" value="" required/>
@@ -38,6 +38,6 @@
       </div>
       <input type="button" class="button" onclick="askAgain()" value="Ask again">
     </div>
-    <script src="./JS/magic-eight.js"></script>
+    <script src="./dist/magic-eight.js"></script>
   </body>
 </html>
