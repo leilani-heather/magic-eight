@@ -7,7 +7,6 @@
 ### Feel free to fork & clone it down, make it your own, fix bugs, write some tests, update the styling - whatever you'd like. It's all yours.
 
 ### Bug Report 🐞
-- Buttons currently push a query string into the URL on key press / `enter` or `return`.
 - Not responsive CSS design
 - `Ask Again` button reloads the page and a user has to re-enter their details.
 - No tests!

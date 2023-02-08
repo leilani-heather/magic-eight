@@ -2,71 +2,72 @@ let userName = ''
 let userQuestion = ''
 
 const submitUserName = () => {
-  const userNameInput = document.querySelector("input[name='userName']");
+  const userNameInput = document.querySelector("input[name='userName']")
   if (!(userNameInput instanceof HTMLInputElement)) {
-    console.error(`Unable to find the input[name='userName']`);
+    console.error(`Unable to find the input[name='userName']`)
     return;
   }
-  let userName = userNameInput.value;
+  let userName = userNameInput.value
   if (!userName) {
     greetUser(userName)
-    console.error(`The input element does not have a value`);
+    console.error(`The input element does not have a value`)
     return;
   }
-  greetUser(userName);
-  userNameInput.value = '';
-  hide('userNameForm');
-  show('questionForm');
+  greetUser(userName)
+  userNameInput.value = ''
+  hide('userNameForm')
+  show('questionForm')
 }
 
+
 const hide = (element: string) => {
-  const hidden = document.getElementById(element);
+  const hidden = document.getElementById(element)
   if (!hidden) {
-    console.error(`The element with id "${element}" was not found`);
-    return;
+    console.error(`The element with id "${element}" was not found`)
+    return
   }
-  hidden.style.display = 'none';
+  hidden.style.display = 'none'
 }
 
 
 const show = (element: string) => {
-  const showing = document.getElementById(element);
+  const showing = document.getElementById(element)
   if (!showing) {
-    console.error(`The element with id "${element}" was not found`);
-    return;
+    console.error(`The element with id "${element}" was not found`)
+    return
   }
   showing.style.display = 'block'
 }
 
 const greetUser = (userName: string) => {
-  const greetUserElement = document.getElementById('greetUser');
+  const greetUserElement = document.getElementById('greetUser')
   if (greetUserElement) {
     userName
       ? (greetUserElement.innerHTML = `Hello, ${userName}!`)
-      : (greetUserElement.innerHTML = `Why won't you tell me your name?! <br>You actually have to!`);
+      : (greetUserElement.innerHTML = `Why won't you tell me your name?! <br>You actually have to!`)
   }
 }
 
 const askQuestion = () => {
-  const userQuestionInput = document.querySelector("input[name='question']");
-  const question = document.getElementById('askQuestion');
+  const userQuestionInput = document.querySelector("input[name='question']")
+  const question = document.getElementById('askQuestion')
 
   if (!(userQuestionInput instanceof HTMLInputElement) || !(question instanceof HTMLElement)) {
-    console.error('Unable to find the userQuestion input element or question element');
-    return;
+    console.error('Unable to find the userQuestion input element or question element')
+    return
   }
 
-  let userQuestion = userQuestionInput.value;
+  let userQuestion = userQuestionInput.value
 
   if (!userQuestion) {
-    question.innerHTML = `You actually have to ask me a question, soz!`;
+    question.innerHTML = `You actually have to ask me a question, soz!`
     return;
   }
 
-  question.innerHTML = `So you want to know '${userQuestion.toLowerCase()}' <br>Hmm, let me see...`;
-  userQuestionInput.value = '';
-  hide('questionForm');
-  doMagic();
+  question.innerHTML = `So you want to know '${userQuestion.toLowerCase()}' <br>Hmm, let me see...`
+  userQuestionInput.value = ''
+  hide('questionForm')
+  doMagic()
 }
 
 const doMagic = () => {
@@ -100,12 +101,12 @@ const doMagic = () => {
       answer = `Don't rely on me. I'm a switch statement tbh.`
   }
 
-  const answerElement = document.getElementById('oracles-answer');
+  const answerElement = document.getElementById('oracles-answer')
   if (!answerElement) {
-    console.error('Unable to find the oracles-answer element');
-    return;
+    console.error('Unable to find the oracles-answer element')
+    return
   }
-  answerElement.innerHTML = answer;}
+  answerElement.innerHTML = answer}
 
 const askAgain = () => {
   window.location.reload()
