@@ -19,7 +19,7 @@ There are probably heaps more, find them and make it your own!
 2. Clone it down
 3. Open `index.html` in a web browser or using the `Live Server` extension in VS Code if you have it
 
-### TypeScript Branch
+### TypeScript Branch 🌲
 There is a wee `TS` branch with the same project converted.
 
 If you're interested in running it and having a snoop around, you may need to run the following in your console
